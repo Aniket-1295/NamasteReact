@@ -1,0 +1,63 @@
+#interesting thing  about npm 
+npm does not stands for node package manager (npm does not have a full form)
+it manages the  installed package but it does not stand for node package manager. 
+behand the scense it works as  a node package manager 
+
+#package.json
+
+package.json is a configuare of npm.
+it keeps and manage  the installed dependensies with there approx version. 
+it gives the information about aour project like name version 
+packages also known as dependensies  
+
+#Bundler  -- bundels our app and get ready to production
+
+--webpack
+--parsal
+--vite
+
+^ vs ~
+
+package.json vs package-lock.json
+
+package-lock.json locks the exact version of the installed dependensies. 
+so whatever is in my local are present in the production
+
+
+#node-module
+
+node module contain all the installed dependensies inside it with there dependensies also
+
+
+#parsal
+
+parsal created the server and host our app to the port 1234
+
+--generates  the Dev build of project at hoested on http://localhost:1234/
+
+-- creats local server
+--HMR - Hot module Replacement
+-- file watching algo 
+-- cashing -- faster builds
+-- image optimization 
+-- minification of files
+--Bundle 
+--compress 
+-- consistance hashing 
+-- code spliting 
+-- defferenial bundling -- support older BR. as well
+-- Error handling 
+-- lazy dev builds
+-- Tree shaking -- remove unused ode for you 
+-- different dev and production bundels
+
+
+
+
+
+
+
+
+
+
+

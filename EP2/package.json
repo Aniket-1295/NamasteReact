@@ -1,0 +1,25 @@
+{
+  "name": "ep2",
+  "version": "1.0.0",
+  "description": "Episode 2",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Aniket",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+
+  "browserList":[
+    "Last 2 versions"
+
+  ]
+}
