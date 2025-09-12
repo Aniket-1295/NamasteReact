@@ -8,48 +8,89 @@ behand the scense it works as  a node package manager
 package.json is a configuare of npm.
 it keeps and manage  the installed dependensies with there approx version. 
 it gives the information about aour project like name version 
-packages also known as dependensies  
+ we install those packages using
+npm
 
-#Bundler  -- bundels our app and get ready to production
-
---webpack
---parsal
---vite
-
-^ vs ~
-
+^ vs ~ 
 package.json vs package-lock.json
 
 package-lock.json locks the exact version of the installed dependensies. 
 so whatever is in my local are present in the production
 
 
+
 #node-module
 
 node module contain all the installed dependensies inside it with there dependensies also
 
+#Bundlers
+
+A bundler is a tool that bundles our app, packages our app so that it can be shipped to production.
+Bundlers are packages.
+
+Examples of Bundlers:
+Webpack
+Vite
+Parcel
+
+
+
+
+
 
 #parsal
 
-parsal created the server and host our app to the port 1234
+--generates  the Dev build of project and hoested on http://localhost:1234/
 
---generates  the Dev build of project at hoested on http://localhost:1234/
-
+Parcel features:
 -- creats local server
---HMR - Hot module Replacement
--- file watching algo 
--- cashing -- faster builds
+--HMR - Hot module Replacement (It means that parcel will keep a track of all the files which
+you are updating.
+)
+-- file watching algo (C++)
+-- cashing -- faster builds(Super fast build algorithm)
+--Bundling
+--Minify Code (-- minification of files)
+--Cleaning our code
 -- image optimization 
--- minification of files
---Bundle 
---compress 
+--Compression
 -- consistance hashing 
 -- code spliting 
 -- defferenial bundling -- support older BR. as well
 -- Error handling 
+--Https on dev mode 
+--Port No
 -- lazy dev builds
--- Tree shaking -- remove unused ode for you 
+-- Tree shaking -- remove unused code for you 
 -- different dev and production bundels
+
+parcel-cache:
+Parcel caches code all the time.
+When we run the application, a build is created which takes some time in ms.
+If we make any code changes and save the application, another build will be triggered which might take even less time than the previous build.
+This reduction of time is due to parcel cache.
+thats how Parcel gives faster build.
+
+dist:
+It keeps the files minified for us.
+When bundler builds the app, the build goes into a folder called dist.
+The `/dist` folder contains the minimized and optimised version of the source code. and serves it on the server.
+
+#Browserslist:
+Browserslist is a tool that specifies which browsers should be supported/compatible in your frontend app.
+
+It makes our code compatible for a lot of browsers.
+
+
+#Tree Shaking:
+Tree shaking is a process of  code optimization in which removing the unwanted code that we do not use while developing the application.
+
+In computing, tree shaking is a dead code elimination
+technique that is applied when optimizing code.
+
+
+
+
 
 
 
