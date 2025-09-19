@@ -1,31 +1,57 @@
 #interesting thing  about npm 
 npm does not stands for node package manager (npm does not have a full form)
+
 it manages the  installed package but it does not stand for node package manager. 
 behand the scense it works as  a node package manager 
+it just not node package manager but we can also hoisted our own package over it. 
+
+basically it is a biggest repo for all the packages
+we need. we can installed them in our project using npm.
+
+--npm init
+-- npm install -D parcel
+-- npx Parcel index.html -- > it create server 
+-- npm install react
+-- npm install react-dom
+-- npx parcel build index.html
+
+
+npm vs npx 
+npm => it install package then use 
+npx => exicute a package without installing them 
+
+
 
 #package.json
 
-package.json is a configuare of npm.
-it keeps and manage  the installed dependensies with there approx version. 
+package.json is a configuare for npm.
+it keeps and manage  the installed dependensies(packages) with there approx version.
+and npm manages the version of all the packages  installed.
+
 it gives the information about aour project like name version 
  we install those packages using
 npm
 
 ^ vs ~ 
+
+^ => it will works for all the minor upgrade in packages
+
+~ => it will works for all the major upgrade in packages
+
 package.json vs package-lock.json
 
 package-lock.json locks the exact version of the installed dependensies. 
-so whatever is in my local are present in the production
-
+so it takes care of whatever is in my local version are same version present in the production.
 
 
 #node-module
 
-node module contain all the installed dependensies inside it with there dependensies also
+node module contain all the installed dependensies inside it with there dependensies also(transitive dependensies)
 
 #Bundlers
 
 A bundler is a tool that bundles our app, packages our app so that it can be shipped to production.
+
 Bundlers are packages.
 
 Examples of Bundlers:
@@ -33,17 +59,15 @@ Webpack
 Vite
 Parcel
 
-
-
-
-
-
 #parsal
 
+npx Parcel index.html
 --generates  the Dev build of project and hoested on http://localhost:1234/
 
+
+
 Parcel features:
--- creats local server
+-- creats local server and generates dev build.
 --HMR - Hot module Replacement (It means that parcel will keep a track of all the files which
 you are updating.
 )
@@ -53,16 +77,19 @@ you are updating.
 --Minify Code (-- minification of files)
 --Cleaning our code
 -- image optimization 
---Compression
--- consistance hashing 
+--Compression of files
+-- consistance hashing => 
 -- code spliting 
--- defferenial bundling -- support older BR. as well
--- Error handling 
+
+-- defferenial bundling =>it create different bundels for different BR.( support older BR. as well)
+
+-- Error handling => better error suggestion (Diagnostics)
+
 --Https on dev mode 
 --Port No
 -- lazy dev builds
 -- Tree shaking -- remove unused code for you 
--- different dev and production bundels
+-- different dev and production builds
 
 parcel-cache:
 Parcel caches code all the time.
@@ -87,6 +114,54 @@ Tree shaking is a process of  code optimization in which removing the unwanted c
 
 In computing, tree shaking is a dead code elimination
 technique that is applied when optimizing code.
+
+
+
+EP03-->
+
+#npm scripts  --> 
+ npm run start =>npx parcel index.html => its creates dev build
+
+ npm run build =>npx parcel build index.html => its creates prod build
+
+#Core of react => using React.createElement('element name',{},child)
+
+#JSX => jsx is not html inside js. it is a syntex extention of js 
+jsx is htmlor xml  like syntex
+It is not a part of React. 
+JavaScript engine cannot understand JSX as it only
+understands ECMAScript.
+
+ Is JSX a valid JavaScript? => JSX is not a valid Javascript syntax as it’s not pure HTML or
+pure JavaScript for a browser to understand.
+
+The JS engine does not understand JSX because
+the JS engine understands ECMAScript 
+
+ If the browser can’t understand JSX how is it still working? => 
+This is because of Parcel because “Parcel is a Beast”.
+Before the code gets to JS Engine it is sent to Parcel and
+Transpiled there. Then after transpilation, the browser gets the code that it can understand.
+Transpilation ⇒ Converting the code in such a format that the browsers can understand. 
+
+Advantages of using JSX.
+1) Sanitizes the data
+If someone gets access to your JS code and sends some malicious
+data which will then get displayed on the screen, that attack is called cross-site scripting.
+It can read cookies, local storage, session storage, get cookies, get info about your device, and read data. JSx takes care of your data.
+If some API passes some malicious data JSX will escape it. It prevents cross-site scripting and sanitizes the data before rendering
+
+
+#babal => js compiler 
+ => browser doesnt even know react exist. babal behand the scense it converts that browser understand. 
+
+ JSX (transpiled by Babel) ⇒ React.createElement ⇒ ReactElement is JS Object ⇒usng .render() method HTML Element(render)
+
+#components => classbased compo
+            => functonal compo
+
+
+
 
 
 

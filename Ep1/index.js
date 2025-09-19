@@ -12,10 +12,12 @@ const e = React.createElement; //injected by babel to react.
   
 console.log(e) //it is an object returned by React.createElement
 
+
+
   function App() {
     return e('div', {id:'parent'},
         [
-            e('div',{id:'child'},
+            e('div',{id:'child1'},
                 [e('h1',{},
                  'i am h1 tag'),e('h2',{},
                      'i am h2 tag'),] )
