@@ -47,6 +47,7 @@ let reactElement = React.createElement(
 const jsxHeading = (
   <>
     <div className="parent">
+    <Title />
       <h1>I am jsxHeading inside div</h1>
     </div>
     <div>
@@ -70,7 +71,7 @@ const HeadingComponent = () => {
   return (
     <>
       <div className="parent">
-        <Title />
+        
         <Title ></Title >
         {Title()}
         

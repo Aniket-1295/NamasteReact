@@ -127,7 +127,7 @@ EP03-->
 #Core of react => using React.createElement('element name',{},child)
 
 #JSX => jsx is not html inside js. it is a syntex extention of js 
-jsx is htmlor xml  like syntex
+jsx is html or xml  like syntex
 It is not a part of React. 
 JavaScript engine cannot understand JSX as it only
 understands ECMAScript.
@@ -159,6 +159,51 @@ If some API passes some malicious data JSX will escape it. It prevents cross-sit
 
 #components => classbased compo
             => functonal compo
+
+
+
+
+EP-04 -->
+
+#Introducing Props.
+
+Short form for properties. To dynamically send data to a
+component we use props. Passing a prop to a function is like
+passing an argument to a function.
+
+Props will be wrapped and send in Javascript object
+
+Destructuring Props =>
+const RestaurantCard = ({resName, cuisine}) => {
+ return(
+ <div>{resName}</div>
+ )
+}
+
+#Good Practices
+Destructuring props
+Optional Chaining
+Example,
+const {name, avgRating, cuisine} = resData?.data;
+
+#Config Driven UI.
+It is a user Interface that is built and configured using a
+declaration configuration file or data structure, rather than
+being hardcoded.
+Config is the data coming from the api which keeps on changing
+according to different factors like user, location, etc. 
+
+
+#Key
+Unique Key id while using mapEach item in the list must be uniquely identified
+Why?
+When we have components at same level and if a new component
+comes on the first without ID, DOM is going to re-render all the components again.
+ As DOM can’t identify where to place it.
+But if we give each of them a unique ID then react knows where
+to put that component according to the ID. It is a good
+optimization and performance thing.
+Note* Never use index as keys in map. It is not recommended.
 
 
 
