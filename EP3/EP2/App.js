@@ -72,6 +72,9 @@ const HeadingComponent = () => {
     <>
       <div className="parent">
         
+
+        {/* Componant composton */}
+        <Title />
         <Title ></Title >
         {Title()}
         

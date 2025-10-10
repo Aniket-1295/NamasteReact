@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "Aniket",
   "license": "ISC",
+  
   "devDependencies": {
     "parcel": "^2.15.4"
   },

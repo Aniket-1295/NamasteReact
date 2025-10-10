@@ -2,6 +2,7 @@ import React from "react";;
 import ReactDom from "react-dom/client";
 
 
+//logo component
 const Logo =()=>{
     return(
 
@@ -12,6 +13,7 @@ const Logo =()=>{
 
 }
 
+//nav component
 const Nav =()=>{
     return(
         <div className="nav-iteams">
@@ -26,6 +28,8 @@ const Nav =()=>{
         
     )
 }
+
+//header component
 const Header =()=>{
     return(
         <div className="header">
@@ -34,6 +38,8 @@ const Header =()=>{
         </div>
     )
 }
+
+//search component
 const SearchCom =()=>{
     return(
         <div className="Search-input">
@@ -43,7 +49,7 @@ const SearchCom =()=>{
     )
 }
 
-//Array of objects
+//Array of objects (constants)
 const rescardData=[
     
 
@@ -90,6 +96,7 @@ const rescardData=[
     
 ]
 
+//card commponent
 //Destructuring Props->
 const CardCom =({res})=>{
 
@@ -108,6 +115,8 @@ const CardCom =({res})=>{
     )
 }
 
+
+//body component
 const Body =()=>{
     return(
 
@@ -145,7 +154,7 @@ const Body =()=>{
                     rescardData.map((rescard)=>{
                         return(
                         <CardCom res={rescard} key={rescard.id}/>
-                        
+
 
                     )})
                  }

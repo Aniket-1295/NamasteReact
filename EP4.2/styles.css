@@ -1,0 +1,87 @@
+.logoContainer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid red; */
+    width: 150px;
+    margin: 0px;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.logoHead{
+    margin-top: -19px;
+}
+
+.headerContainer{
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 15rem;
+
+}
+
+.searchContainer{
+    width: 500px;
+}
+
+.searchInput{
+    width: 500px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+
+}
+
+.navContainer > ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+.navContainer > ul > li{
+    font-weight: bold;
+    color: #555;
+}
+.navContainer > ul > li:hover{
+    color: #3d09e8;
+}
+
+.cardContainer{
+    direction: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+
+}
+
+.cardImg{
+
+width: 100%;
+    /* max-width: 200px; */
+    height: auto;
+    border-radius: 8px;
+}
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: center; */
+    padding: 20px;
+}
