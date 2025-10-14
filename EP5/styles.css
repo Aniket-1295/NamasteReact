@@ -80,8 +80,27 @@ width: 100%;
 
 .mainContainer{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    /* justify-content: center; */
+    /* padding: 20px; */
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #eb7018;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardDiv{
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* justify-content: center; */
+    justify-content: flex-start;
     padding: 20px;
+
 }
