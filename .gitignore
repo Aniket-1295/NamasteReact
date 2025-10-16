@@ -14,4 +14,6 @@ EP5/node_modules
 EP5/dist
 EP5/.parcel-cache
 
-
+EP6/EP5/node_modules
+EP6/EP5/dist
+EP6/EP5/.parcel-cache
