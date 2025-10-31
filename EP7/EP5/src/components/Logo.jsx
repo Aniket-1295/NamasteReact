@@ -1,12 +1,7 @@
 import {LOGO_URL} from "../utils/constants"
-
+// import LOGO from "../assets/download.png"
 
 const LogoCompo=()=>{
-
-
-
-
-    console.log("dscdc")
 
     return(
         <>
@@ -14,8 +9,8 @@ const LogoCompo=()=>{
         <div className="logoContainer">
 
             <img className="logo" src={LOGO_URL}/>
-          
-
+            {/* <img className="logo" src={LOGO}alt="LOGO"/> */}
+            <br />
             <h3 className="logoHead">For Foodie</h3>
 
         </div>

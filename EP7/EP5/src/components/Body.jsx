@@ -4,8 +4,15 @@ import Shimmer from "./Shimmer";
 
 //norml js utility functions prewritten by facebook developers avalible in react library 
 import { useState,useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { swiggy_API_URL } from "../utils/constants";
 
-const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
+
+
+const BodyCompo=()=>{
+
+    const {searchText,seacrhButtonClicked,setSearchButtonClicked}= useOutletContext();
 
     const [btnClicked,setButtonClicked] =useState(false);
 
@@ -64,10 +71,6 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
 
     },[])
 
-    useEffect(()=>{
-        console.log("every render ")
-    })
-
     const fetchRestorantsList= async()=>{
 
 
@@ -77,15 +80,23 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
 
             // const response= await fetch("https://instafood.onrender.com/api/restaurants?lat=12.9351929&lng=77.62448069999999")
 
-            const response= await fetch("https://swiggy-api-4c740.web.app/swiggy-api.json")
+            // const response= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
 
-            const json= await response.json();
-            console.log(json);
+            // const ressponse= await fetch("https://namastedev.com/api/v1/listRestaurants")
+
+            const ressponse = await fetch(swiggy_API_URL);
+
+            const json= await ressponse.json();
+            // console.log(json);
     
-            setResData(json?.data?.cards[4].card.card?.gridElements.infoWithStyle.restaurants)
+            // setResData(json?.data?.cards[4].card.card?.gridElements?.infoWithStyle?.restaurants)
            
-            setSearchResults(json?.data?.cards[4].card.card?.gridElements.infoWithStyle.restaurants)
-            setLoading(false);
+            // setSearchResults(json?.data?.cards[4].card.card?.gridElements?.infoWithStyle?.restaurants)
+            // setLoading(false);
+
+            setResData(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+            setSearchResults(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+             setLoading(false);
 
 
         }
@@ -93,7 +104,7 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
         catch(error){
             setLoading(false);
 
-            console.log("Eroor acured ",error)
+            console.log("Eroor acured one ",error)
         }
 
        
@@ -110,7 +121,7 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
 
     const handleClick=(e)=>{
         const filteredList = resData.filter((res)=>{
-            return res?.info?.avgRating >=4.3;    
+            return res?.info?.avgRating >=4.4;    
         })
 
         setButtonClicked(true);
@@ -123,10 +134,7 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
 
     const handleSellAll=(e)=>{
         // setResData(resData);
-        // fetchRestorantsList()
-
-        setSearchResults(resData)
-
+        fetchRestorantsList()
         setButtonClicked(false);
     }
 
@@ -153,18 +161,21 @@ const BodyCompo=({searchText,seacrhButtonClicked,setSearchButtonClicked})=>{
 
           {
             
-            searchResults.length === 0 && loading ===true  ? 
+            searchResults?.length === 0 && loading ===true  ? 
             <div>
             <Shimmer />
             </div>
             
-            : searchResults.map((res)=>{
+            : searchResults?.map((res)=>{
                
                 return(
+                    <Link to={"/restaurant/"+res?.info?.id} key={res?.info?.id} >
                     <CardCompo 
+                    className="cardLink"
                     resData={res}
                     key={res?.info?.id}
                      />
+                        </Link>
                 )
             })
            }

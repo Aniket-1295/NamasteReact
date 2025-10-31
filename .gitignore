@@ -17,3 +17,9 @@ EP5/.parcel-cache
 EP6/EP5/node_modules
 EP6/EP5/dist
 EP6/EP5/.parcel-cache
+
+EP7/EP5/node_modules
+EP7/EP5/dist
+EP7/EP5/.parcel-cache
+
+EP7/proxy_backend/node_modules
