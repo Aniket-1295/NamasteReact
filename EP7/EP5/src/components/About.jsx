@@ -8,7 +8,7 @@ const About = () => {
 
   <Link to="/about/services">
   <p >our other services</p>
-  
+   
   </Link>
  
     
