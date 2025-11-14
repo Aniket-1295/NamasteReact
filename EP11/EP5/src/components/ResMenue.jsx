@@ -3,12 +3,16 @@ import { useParams } from "react-router-dom";
 import { MENU_API_URL } from "../utils/constants";
 import useFetch from "../utils/hooks/useFetch";
 import ItemCategoryList from "./IreamCategoryList";
+import { useState } from "react";
 
 
 const ResMenue = () => {
   const { resID } = useParams();
 
-
+  //now parent component can control the state of all the child component
+  //now all the cild components become controlled component.
+  //this called lifting of state we lift the state of each child component to the parent component. now all the child component have shared state.it doent hold there own state.
+  const [showList,setShowList]= useState(null);
 
   // const [resInfo,setResInfo]=useState(null);
 
@@ -74,12 +78,13 @@ const ResMenue = () => {
       <div>
             {
 
-                iteamCatogary && iteamCatogary.map((items)=>{
+                iteamCatogary && iteamCatogary.map((items,index)=>{
                     return(
                         <ItemCategoryList
-
                         key={items?.card?.card?.title}
                         data={items?.card?.card}
+                        showList={items?.card?.card?.title === showList?true :false}
+                        setShowList={setShowList}
                          />
 
                     )

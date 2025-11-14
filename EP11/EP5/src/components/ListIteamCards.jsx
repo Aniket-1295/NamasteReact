@@ -1,5 +1,5 @@
 const ListIteamCarda = ({ list }) => {
-  console.log(list);
+  // console.log(list);
 
   return (
     <>

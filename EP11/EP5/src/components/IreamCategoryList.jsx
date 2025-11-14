@@ -1,14 +1,18 @@
 import ListIteamCarda from "./ListIteamCards";
-import { useState } from "react";
+// import { useState } from "react";
 
-const ItemCategory = ({ data }) => {
-  const [showList, setShowList] = useState(false);
+const ItemCategory = ({ data,showList, setShowList }) => {
+  //I remove the state form here lift the state to parent component so parent component can control the state.
+  //now this ccomponent is uncontrolled component if we want to contole the the state we have to lift the state up to the parent component
+
+  // const [showList, setShowList] = useState(false);
 
   // console.log(data)
 
   
   const handleClick = () => {
-    setShowList(!showList);
+    // setShowList(!showList);
+   setShowList((prevL)=> prevL === data?.title ? null : data?.title)
   };
 
   return (
