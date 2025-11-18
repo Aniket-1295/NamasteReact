@@ -6,7 +6,7 @@ const useOnlineStatus =()=>{
 
     const [OnlineStatus,setOnlineStatus] =useState(navigator.onLine);
 
-    console.log("Online status hook invoked ",OnlineStatus)
+    // console.log("Online status hook invoked ",OnlineStatus)
 
     //onmounting we have to add the event listeners for online and offline events
     //so here we need useEffect hook
@@ -14,12 +14,12 @@ const useOnlineStatus =()=>{
     useEffect(()=>{
 
         window.addEventListener("online",()=>{
-            console.log("online event detected");
+            // console.log("online event detected");
             setOnlineStatus(true)
         })
 
         window.addEventListener("offline",()=>{
-            console.log("offline event detected");
+            // console.log("offline event detected");
             setOnlineStatus(false);
         })
     },[])

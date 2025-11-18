@@ -9,3 +9,5 @@ export const LOGO_URL="https://logos-world.net/wp-content/uploads/2020/11/Swiggy
 export const swiggy_API_URL="https://namastedev.com/api/v1/listRestaurants";
 
 export const MENU_API_URL="https://namastedev.com/api/v1/listRestaurantMenu/";
+
+export const USER_API_URL="http://localhost:8000";

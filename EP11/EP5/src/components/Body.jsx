@@ -8,14 +8,16 @@ import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { swiggy_API_URL } from "../utils/constants";
 import useFetch from "../utils/hooks/useFetch";
-
 import useOnlineStatus from "../utils/hooks/useOnlineStatus";
+import userContext from "../utils/userContext";
+import { useContext } from "react";
 
 
 const BodyCompo = () => {
   const onlineStatus = useOnlineStatus();
+  const VegLabeldCard = WithVegLabbledCard(CardCompo);
 
-   const VegLabeldCard = WithVegLabbledCard(CardCompo);
+  const { loggedInUser,setUserName } = useContext(userContext);
 
   
 
@@ -118,18 +120,6 @@ const BodyCompo = () => {
     return (
       <div className="mainContainer">
 
-        {/* react doesnt run the setTimeout nsde render */}
-        {/* {
-            setTimeout(()=>{
-
-                return(
-                    <Shimmer />
-                )
-
-            },3000)
-
-
-        } */}
         <h1>🔴 You are offline please check your internet connection </h1>
        
       </div>
@@ -165,6 +155,17 @@ const BodyCompo = () => {
               See Highly Rated Restaurants
             </button>
           )}
+
+          <input
+          className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none ml-5"
+          type="text"
+          placeholder="example to show context api"
+          value={loggedInUser}
+          onChange={(e)=>{setUserName(e.target.value)}}
+           />
+
+
+
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

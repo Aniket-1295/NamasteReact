@@ -11,7 +11,10 @@ import ResMenue from "./components/ResMenue";
 import Services from "./components/Services";
 import Cart from "./components/Cart";
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
+
+
 // import Grosary from "./components/Grosary";
+
 
 // const resList=[
 //     {
@@ -219,11 +222,13 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom";
 // }
 
 //creating configuration for routes
-
-
 const Grosary =lazy(()=>import("./components/Grosary"));
 
 
+
+
+ //logic of authentication
+  
 
 const appRoute= createBrowserRouter([
     {
@@ -279,4 +284,7 @@ const appRoute= createBrowserRouter([
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={appRoute}  />);
+root.render(
+
+<RouterProvider router={appRoute}  />
+);

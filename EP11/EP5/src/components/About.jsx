@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import ExampleClass from './ExampleClass.jsx';
+import userContext from '../utils/userContext';
+// import ExampleClass from './ExampleClass.jsx';
 
 // const About = () => {
 //   return (
@@ -33,35 +34,38 @@ class About extends React.Component{
 
   }
 
-  componentDidMount(){
-    console.log("parent componentDidMount called");
-  }
-
-  componentDidUpdate(){
-    console.log("parent componentDidUpdate called");
-  }
-
   render(){
 
-    console.log("parent render");
-
+   
     return (
           <>
-          <div>About Page</div>
-          <h1>{this.state.count}</h1>
-             <button onClick={()=>{
-                this.setState({
-                    count:this.state.count+1
-                })
-             }}>clc</button>
-          <br />
-          <ExampleClass child="child1" />
-          <ExampleClass child="child2" />
-      
-        <Link to="/about/services">
-        <p >our other services</p>
-         
+          <div className='text-center m-5'>About Page
+
+          <Link
+          className='bg-blue-500 hover:bg-blue-700 text-black font-bold py-2  rounded m-5'
+           to="/about/services">
+       
+          <button>our other services</button>
         </Link>
+          </div>
+
+          <div className='text-center'>
+            {
+              <userContext.Consumer>
+                {
+                  ({logidInUser})=>{
+                    return <h1>{logidInUser}</h1>
+                  }
+                }
+
+              </userContext.Consumer>
+            }
+
+          </div>
+
+        
+      
+       
        
           
           </>

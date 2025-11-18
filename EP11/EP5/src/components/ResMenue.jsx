@@ -47,9 +47,9 @@ const ResMenue = () => {
   const { name, avgRating, costForTwo, cuisines } =
     resInfo?.cards[2]?.card?.card?.info || {};
 
-  const { title, itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card || {};
+  // const { title, itemCards } =
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+  //     ?.card || {};
 
 
     const iteamCatogary = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((iteam)=>{
@@ -74,7 +74,7 @@ const ResMenue = () => {
 
        
       </div>
-
+ś
       <div>
             {
 
