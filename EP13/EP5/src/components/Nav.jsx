@@ -44,7 +44,7 @@ const items =useSelector((store)=>store.cart.items);
               setBtntxt((prev) => {
                 return prev === "Login" ? "Logout" : "Login";
               });
-              console.log(btntxt);
+              // console.log(btntxt);
             }}
           >
             {btntxt}

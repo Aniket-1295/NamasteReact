@@ -2,6 +2,8 @@ import { CDN_URL } from "../utils/constants";
 
 const CardCompo = ({ resData }) => {
   // const { name, cuisines, avgRating, costForTwo } = resData?.info || {}
+
+  // console.log(resData);
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">

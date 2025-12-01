@@ -48,42 +48,13 @@ const BodyCompo = () => {
     }
   }, [seacrhButtonClicked]);
 
-  // useEffect(()=>{
-
-  //     fetchRestorantsList()
-
-  // },[])
-
-  // const fetchRestorantsList= async()=>{
-
-  //     try{
-
-  //         setLoading(true);
-
-  //         const ressponse = await fetch(swiggy_API_URL);
-
-  //         const json= await ressponse.json();
-
-  //         setResData(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  //         setSearchResults(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  //          setLoading(false);
-
-  //     }
-
-  //     catch(error){
-  //         setLoading(false);
-
-  //         console.log("Eroor acured one ",error)
-  //     }
-
-  // }
-
-  //here we dont handle the api responses like loading error because we are using useFetch custom hook
   
   
   const { data: res, loading, error } = useFetch(swiggy_API_URL);
 
-  // console.log(res);
+  console.log(res);
+
+  
 
   useEffect(() => {
     if (res) {
